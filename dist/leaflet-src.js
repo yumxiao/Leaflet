@@ -1,5 +1,5 @@
 /* @preserve
- * Leaflet 1.3.1+hotfix/remove_layer_failed.ba6f97f, a JS library for interactive maps. http://leafletjs.com
+ * Leaflet 1.3.1+hotfix/remove_layer_failed.329cfef, a JS library for interactive maps. http://leafletjs.com
  * (c) 2010-2017 Vladimir Agafonkin, (c) 2010-2011 CloudMade
  */
 
@@ -9,7 +9,7 @@
 	(factory((global.L = {})));
 }(this, (function (exports) { 'use strict';
 
-var version = "1.3.1+hotfix/remove_layer_failed.ba6f97ff";
+var version = "1.3.1+hotfix/remove_layer_failed.329cfef1";
 
 /*
  * @namespace Util
@@ -7710,7 +7710,7 @@ var Path = Layer.extend({
 	},
 
 	onRemove: function () {
-		if (this._renderer === null || this._renderer === undefined) {
+		if (!this._renderer) {
 			return;
 		}
 

@@ -87,7 +87,7 @@ export var Path = Layer.extend({
 	},
 
 	onRemove: function () {
-		if (this._renderer === null || this._renderer === undefined) {
+		if (!this._renderer) {
 			return;
 		}
 
