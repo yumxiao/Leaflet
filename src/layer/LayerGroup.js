@@ -117,8 +117,9 @@ export var LayerGroup = Layer.extend({
 	// });
 	// ```
 	eachLayer: function (method, context) {
-		for (var i in this._layers) {
-			method.call(context, this._layers[i]);
+		var keys = Object.keys(this._layers);
+		for (var i = 0; i < keys.length; i++) {
+			method.call(context, this._layers[keys[i]]);
 		}
 		return this;
 	},
